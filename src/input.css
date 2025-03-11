@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li {
+    @apply p-3 hover:text-gray-500 hover:duration-700 hover:ease-out cursor-pointer;
+}
+
+body footer ul a {
+    @apply p-3 hover:text-gray-500 hover:duration-700 hover:ease-out;
+}
