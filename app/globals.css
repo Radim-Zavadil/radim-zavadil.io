@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/*body*/
+
+body {
+  background-color: #000000;
+  @apply text-white font-[Inter] h-screen flex flex-col;
+}
+
+h1 {
+  @apply text-4xl font-semibold my-1;
+}
+
+p{
+  @apply text-[#CBC8CD];
+}
+
+footer {
+  @apply text-[rgba(230,230,230,0.5)] text-[12px] font-extralight tracking-widest mx-12 ;
+}
+
+footer ul a {
+  @apply p-3 hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out;
+}
+
+ul {
+  @apply flex;
+}
+
+li {
+  @apply p-3 hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out cursor-pointer;
+}
+
+.card {
+  @apply flex justify-center items-center w-[400px] h-[100px] bg-transparent px-1.5 py-1.5 mb-[16px] rounded-xl border-[1px] border-[rgba(223,223,223,0.1)] shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] hover:scale-105 hover:duration-500 hover:ease-out;
+}
+
+.cardTitle {
+  @apply text-white font-semibold text-[16px];
+}
+
+.cardText {
+  @apply text-[rgba(255,255,255,0.8)] font-light text-[16px];
+}
+
+.cardIcon {
+  @apply h-[60px] m-3;
+}
+
+.icon {
+  @apply m-1 w-6 hover:opacity-50 hover:duration-500 hover:ease-out;
+}
+
+.bio {
+  @apply mt-2 text-xl bg-gradient-to-r from-[#FFFFFF] inline-block text-transparent bg-clip-text;
+}
+
+.blur {
+  @apply opacity-0 z-10 w-60 h-96 absolute ml-[730px] mr-[60px] rounded-full bg-[rgba(125,0,211,0.05)] blur-3xl lg:opacity-100;
+}
+
+.btn {
+  @apply w-[120px] h-[30px] border-2 border-[rgba(223,223,223,0.1)] rounded-[5px] text-center mt-3 hover:opacity-60 hover:duration-150 hover:ease-out;
+}
+
+
+/*Switch*/
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgba(124, 124, 124, 0.7);
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.button:hover {
+  background-color: rgb(44, 44, 43);
+  transition-duration: .5s;
+}
+
+.button:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.button:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
+
+
+/*light rays
+@keyframes jumbo {
+  from {
+      background-position: 50% 50%, 50% 50%;
+  }
+  to {
+      background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.jumbo {
+  --stripes: repeating-linear-gradient(
+      100deg,
+      #fff 0%,
+      #fff 7%,
+      transparent 10%,
+      transparent 12%,
+      #fff 16%
+  );
+  --stripesDark: repeating-linear-gradient(
+      100deg,
+      #000 0%,
+      #000 7%,
+      transparent 10%,
+      transparent 12%,
+      #000 16%
+  );
+  --rainbow: repeating-linear-gradient(
+      100deg,
+      #60a5fa 10%,
+      #e879f9 15%,
+      #60a5fa 20%,
+      #5eead4 25%,
+      #60a5fa 30%
+  );
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+
+  filter: invert(100%);
+
+  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+
+  pointer-events: none;
+}
+
+.jumbo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 200%, 100%;
+  animation: jumbo 60s linear infinite;
+  background-attachment: fixed;
+  mix-blend-mode: difference;
+}
+
+.dark .jumbo {
+  background-image: var(--stripesDark), var(--rainbow);
+  filter: blur(10px) opacity(50%) saturate(200%);
+}
+.dark .jumbo::after {
+  background-image: var(--stripesDark), var(--rainbow);
+}
+*/
