@@ -9,7 +9,7 @@ import linkedlnIcon from './linkedln-icon.png';
 
 export default function Icons() {
   return (
-    <main className='flex text-gray-400 m-2'>
+    <main className='flex items-center text-gray-400 m-2'>
         <Link href=""><Image src={twitterIcon} alt='X logo' quality={100} className='icon'/></Link>
         <Link href=""><Image src={instagramIcon} alt='Instagram logo' quality={100} className='icon'/></Link>
         <Link href=""><Image src={githubIcon} alt='Github logo' quality={100} className='icon'/></Link>

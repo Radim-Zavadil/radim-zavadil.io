@@ -3,8 +3,8 @@
 /*body*/
 
 body {
-  background-color: #000000;
-  @apply text-white font-[Inter] h-screen flex flex-col;
+  background-color: #FFFFFF;
+  @apply text-black dark:text-white dark:bg-black font-[Inter] h-screen flex flex-col;
 }
 
 h1 {
@@ -12,15 +12,15 @@ h1 {
 }
 
 p{
-  @apply text-[#CBC8CD];
+  @apply text-[#57534E] dark:text-[#CBC8CD];
 }
 
 footer {
-  @apply text-[rgba(230,230,230,0.5)] text-[12px] font-extralight tracking-widest mx-12 ;
+  @apply text-[#171717] dark:text-[rgba(230,230,230,0.5)] text-[12px] font-extralight tracking-widest mx-12 ;
 }
 
 footer ul a {
-  @apply p-3 hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out;
+  @apply p-3 hover:text-gray-300 dark:hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out;
 }
 
 ul {
@@ -28,19 +28,19 @@ ul {
 }
 
 li {
-  @apply p-3 hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out cursor-pointer;
+  @apply p-3 hover:text-gray-300 dark:hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out cursor-pointer;
 }
 
 .card {
-  @apply flex justify-center items-center w-[400px] h-[100px] bg-transparent px-1.5 py-1.5 mb-[16px] rounded-xl border-[1px] border-[rgba(223,223,223,0.1)] shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] hover:scale-105 hover:duration-500 hover:ease-out;
+  @apply flex justify-center items-center w-[400px] h-[100px] bg-[#F5F5F4] dark:bg-transparent px-1.5 py-1.5 mb-[16px] rounded-xl border-[1px] border-[rgb(209,213,219)] dark:border-[rgba(223,223,223,0.1)] dark:shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] hover:scale-105 hover:duration-500 hover:ease-out;
 }
 
 .cardTitle {
-  @apply text-white font-semibold text-[16px];
+  @apply text-[#171717] dark:text-white font-semibold text-[16px];
 }
 
 .cardText {
-  @apply text-[rgba(255,255,255,0.8)] font-light text-[16px];
+  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-light text-[16px];
 }
 
 .cardIcon {
@@ -52,11 +52,11 @@ li {
 }
 
 .bio {
-  @apply mt-2 text-xl bg-gradient-to-r from-[#FFFFFF] inline-block text-transparent bg-clip-text;
+  @apply mt-2 text-xl text-[#57534E] dark:bg-gradient-to-r from-[#FFFFFF] inline-block dark:text-transparent dark:bg-clip-text;
 }
 
 .blur {
-  @apply opacity-0 z-10 w-60 h-96 absolute ml-[730px] mr-[60px] rounded-full bg-[rgba(125,0,211,0.05)] blur-3xl lg:opacity-100;
+  @apply z-10 w-60 h-96 absolute ml-[730px] mr-[60px] rounded-full bg-[rgba(127,0,211,0.3)] blur-3xl lg:opacity-100;
 }
 
 .btn {
@@ -67,23 +67,23 @@ li {
 /*Switch*/
 /* From Uiverse.io by vinodjangid07 */ 
 .button {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  background-color: rgb(0, 0, 0);
+  /*background-color: rgb(0, 0, 0);*/
   border: 1px solid rgba(124, 124, 124, 0.7);
   border-radius: 30px;
-  color: rgb(255, 255, 255);
+  /*color: rgb(255, 255, 255);*/
   font-weight: 600;
   position: relative;
   cursor: pointer;
   transition-duration: .2s;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
   padding-left: 8px;
   transition-duration: .5s;
+  @apply text-black dark:text-white bg-transparent;
 }
 
 .svgIcon {
@@ -96,8 +96,8 @@ li {
 }
 
 .button:hover {
-  background-color: rgb(44, 44, 43);
   transition-duration: .5s;
+  @apply bg-gray-200 dark:bg-[rgba(44,44,43)]
 }
 
 .button:active {
