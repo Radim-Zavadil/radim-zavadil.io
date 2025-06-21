@@ -32,19 +32,19 @@ li {
 }
 
 .card {
-  @apply flex justify-center items-center w-[400px] h-[100px] bg-[#F5F5F4] dark:bg-transparent px-1.5 py-1.5 mb-[16px] rounded-xl border-[1px] border-[rgb(209,213,219)] dark:border-[rgba(223,223,223,0.1)] dark:shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] hover:scale-105 hover:duration-500 hover:ease-out;
+  @apply flex justify-start items-center w-[493px] h-[103px] bg-[#F5F5F4] p-5 dark:bg-transparent rounded-xl border-[1px] border-[rgb(209,213,219)] dark:border-[rgba(223,223,223,0.1)] dark:shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)];
 }
 
 .cardTitle {
-  @apply text-[#171717] dark:text-white font-semibold text-[16px];
+  @apply text-[#171717] dark:text-white font-light text-[16px] mb-3;
 }
 
 .cardText {
-  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-light text-[16px];
+  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-extralight text-[13px];
 }
 
 .cardIcon {
-  @apply h-[60px] m-3;
+  @apply h-[60px] mr-5;
 }
 
 .icon {
