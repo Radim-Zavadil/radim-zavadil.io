@@ -18,7 +18,7 @@ export default function Cards() {
       
       <motion.div initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{duration: 1, ease: "easeOut", delay: 0.2 }}>
         <Link href="#">
-          <div className='card'>
+          <div className='group'>
             <Image src={cardIcon1} alt='Card Icon' quality={100} className='cardIcon'/>
             <div>
               <p className='cardTitle'>Eightsleep</p>
@@ -30,7 +30,7 @@ export default function Cards() {
 
       <motion.div initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{duration: 1, ease: "easeOut", delay: 0.2 }}>
         <Link href="#">
-          <div className='card'>
+          <div className='group'>
             <Image src={cardIcon2} alt='Card Icon' quality={100} className='cardIcon'/>
             <div>
               <p className='cardTitle'>Agency</p>
@@ -42,7 +42,7 @@ export default function Cards() {
 
       <motion.div initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{duration: 1, ease: "easeOut", delay: 0.2 }}>
         <Link href="#">
-          <div className='card'>
+          <div className='group'>
             <Image src={cardIcon1} alt='Card Icon' quality={100} className='cardIcon'/>
             <div>
               <p className='cardTitle'>My Other Projects</p>
