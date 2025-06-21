@@ -56,7 +56,7 @@ li {
 }
 
 .blur {
-  @apply z-10 w-60 h-96 absolute ml-[730px] mr-[60px] rounded-full bg-[rgba(127,0,211,0.3)] blur-3xl lg:opacity-100;
+  @apply z-10 w-10 h-96 absolute ml-[1800px] rounded-full bg-[rgba(28,145,255,0.3)] blur-3xl lg:opacity-100;
 }
 
 .btn {
