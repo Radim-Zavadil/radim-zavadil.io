@@ -31,20 +31,52 @@ li {
   @apply p-3 hover:text-gray-300 dark:hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out cursor-pointer;
 }
 
-.card {
-  @apply flex justify-center items-center w-[400px] h-[100px] bg-[#F5F5F4] dark:bg-transparent px-1.5 py-1.5 mb-[16px] rounded-xl border-[1px] border-[rgb(209,213,219)] dark:border-[rgba(223,223,223,0.1)] dark:shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] hover:scale-105 hover:duration-500 hover:ease-out;
+.group {
+  @apply flex justify-start items-center w-[493px] h-[103px] bg-[#F5F5F4] p-5 dark:bg-transparent rounded-xl border-[1px] border-[rgb(209,213,219)] hover:border-r-[2px] hover:border-r-[rgba(255,255,255,0.3)] dark:border-[rgba(223,223,223,0.1)] dark:shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] relative;
+}
+
+.group::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right,
+    rgba(0,0,0,0) 0%,
+    rgba(19,33,47,0.5) 82%,
+    rgba(29,52,71,0.75) 100%
+  );
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  pointer-events: none;
+}
+
+.group::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  box-shadow: inset 0 0 100px rgba(255,255,255,0.1);
+  mask: linear-gradient(to left, white 0%, white 5px, transparent 15px);
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  pointer-events: none;
+}
+
+.group:hover::before,
+.group:hover::after {
+  opacity: 1;
 }
 
 .cardTitle {
-  @apply text-[#171717] dark:text-white font-semibold text-[16px];
+  @apply text-[#171717] dark:text-white font-light text-[16px] mb-3 group-hover:bg-[linear-gradient(to_right,rgba(255,255,255,1)_47%,rgba(38,64,94,1)_100%)] group-hover:bg-clip-text group-hover:text-transparent transition-all hover:duration-300 hover:ease-in;
 }
 
 .cardText {
-  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-light text-[16px];
+  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-extralight text-[13px] group-hover:bg-[linear-gradient(to_right,rgba(255,255,255,0.8)_50%,rgba(86,112,143,1)_100%)] group-hover:bg-clip-text group-hover:text-transparent transition-all hover:duration-300 hover:ease-in;
 }
 
 .cardIcon {
-  @apply h-[60px] m-3;
+  @apply h-[60px] mr-5;
 }
 
 .icon {
