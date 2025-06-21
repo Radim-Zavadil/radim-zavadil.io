@@ -23,7 +23,7 @@ export default function CursorBlur() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-16 h-16 bg-[rgb(98,0,211)] rounded-full blur-[50px]"
+      className="fixed top-0 left-0 w-16 h-16 bg-[rgba(28, 145, 255, 0.30)] rounded-full blur-[50px]"
       style={{
         x: smoothX,
         y: smoothY,
