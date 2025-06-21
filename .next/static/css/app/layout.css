@@ -1346,12 +1346,11 @@ li {
 .blur {
   position: absolute;
   z-index: 10;
-  margin-right: 60px;
-  margin-left: 730px;
+  margin-left: 1800px;
   height: calc(var(--spacing) * 96);
-  width: calc(var(--spacing) * 60);
+  width: calc(var(--spacing) * 10);
   border-radius: calc(infinity * 1px);
-  background-color: rgba(127,0,211,0.3);
+  background-color: rgba(28,145,255,0.3);
   --tw-blur: blur(var(--blur-3xl));
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   @media (width >= 64rem) {
