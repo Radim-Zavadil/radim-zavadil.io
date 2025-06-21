@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Footer from "./components/Footer";
+import FooterWrapper from "./components/FooterWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
         <div className="w-full border-[1px] border-[rgba(209,213,219,0.5)] dark:border-[rgba(223,223,223,0.1)] absolute bottom-10"></div>
 
         {children}
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ export default function Footer() {
                 <li>ALL RIGHTS RESERVED</li>
             </ul>
             <ul className="flex">
-                <Link href="/contact">CONTACT</Link>
+                <Link href='mailto:radimzavadil15@gmail.com?subject=Inquiry&body=Write message here ...'>CONTACT</Link>
                 <li>TERMS</li>
                 <li>PRIVACY</li>
             </ul>

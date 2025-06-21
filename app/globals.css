@@ -72,15 +72,15 @@ li {
 }
 
 .cardText {
-  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-extralight text-[13px] group-hover:bg-[linear-gradient(to_right,rgba(255,255,255,0.8)_50%,rgba(86,112,143,1)_100%)] group-hover:bg-clip-text group-hover:text-transparent transition-all hover:duration-300 hover:ease-in;
+  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-extralight text-[13px] group-hover:bg-[linear-gradient(to_right,rgba(255,255,255,0.8)_50%,rgba(125,169,219,1)_100%)] group-hover:bg-clip-text group-hover:text-transparent transition-all hover:duration-300 hover:ease-in;
 }
 
 .cardIcon {
   @apply h-[60px] mr-5;
 }
 
-.icon {
-  @apply m-1 w-6 hover:opacity-50 hover:duration-500 hover:ease-out;
+.title {
+  @apply text-3xl font-medium text-white;
 }
 
 .bio {
@@ -88,7 +88,7 @@ li {
 }
 
 .blur {
-  @apply z-10 w-10 h-96 absolute ml-[1800px] rounded-full bg-[rgba(28,145,255,0.3)] blur-3xl lg:opacity-100;
+  @apply z-10 w-32 h-96 absolute ml-[1760px] rounded-full bg-[rgba(28,145,255,0.1)] blur-3xl lg:opacity-100;
 }
 
 .btn {

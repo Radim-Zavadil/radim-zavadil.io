@@ -6,6 +6,7 @@ import CursorBlur from "./components/CursorBlur";
 import Switch from "./components/Switch";
 import { motion } from "framer-motion";
 
+
 export default function Home() {
   return (
     <main className="flex-grow flex justify-center items-center">
@@ -30,7 +31,7 @@ export default function Home() {
             <div>
               <Icons />
               
-              <h1>Hi, I'm Radim!</h1>
+              <p className="title">Hi, I'm Radim</p>
               <p className="bio">A 17 years-old student from Czech Republic,<br /> currently living in Kroměříž. I'm a high <br /> school student learning IT.</p>
             </div>
             
@@ -38,8 +39,6 @@ export default function Home() {
 
           <Cards />
         </motion.div>
-
-      
 
       
     </main>

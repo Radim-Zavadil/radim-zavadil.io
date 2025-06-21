@@ -1,16 +1,16 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
 import Blur from './components/Blur'
+import UnicornStudioEmbed from './components/UnicornStudioEmbed'
 
 export default function notFound() {
   return (
-    <main className='flex-grow flex justify-center items-center'>
-      <div>
-        <Blur />
-        <p className='text-3xl font-bold animate-pulse'>404</p>
-        <p>Uh oh! This page does not exists, maybe you clicked an old link or misspelled. Please try again…</p>
-        <div className='btn'><Link href="/">Return Home</Link></div>
-      </div>
+    <main className='h-screen flex justify-center items-center overflow-hidden'>
+        <div className=" absolute top-10 left-10 p-5">
+            <Link href="/" className=" py-1 px-6 border-[1px] border-[rgb(209,213,219)] dark:border-[rgba(255,255,255,0.15)] border-opacity-15 rounded-full bg-transparent text-black dark:text-white hover:opacity-50 duration-500 ease-in-out">Back</Link>
+        </div>
+        <UnicornStudioEmbed />
     </main>
   )
 }
