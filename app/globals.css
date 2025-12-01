@@ -80,11 +80,11 @@ li {
 }
 
 .title {
-  @apply text-3xl font-medium text-white;
+  @apply text-lg font-medium text-black;
 }
 
 .bio {
-  @apply mt-2 text-xl text-[#57534E] dark:bg-gradient-to-r from-[#FFFFFF] inline-block dark:text-transparent dark:bg-clip-text;
+  @apply mt-2 text-lg text-[#57534E] dark:bg-gradient-to-r from-[#FFFFFF] inline-block dark:text-transparent dark:bg-clip-text;
 }
 
 .blur {
@@ -95,6 +95,13 @@ li {
   @apply w-[120px] h-[30px] border-2 border-[rgba(223,223,223,0.1)] rounded-[5px] text-center mt-3 hover:opacity-60 hover:duration-150 hover:ease-out;
 }
 
+.linkText {
+  @apply text-black font-medium border-b-2 border-gray-200 hover:border-gray-500 ;
+}
+
+.link {
+  @apply px-4 py-2 rounded-md hover:bg-gray-100 mt-5;
+}
 
 /*Switch*/
 /* From Uiverse.io by vinodjangid07 */ 

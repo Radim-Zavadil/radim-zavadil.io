@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex-grow flex justify-center items-center">
+    <main className="flex-grow flex flex-col justify-center items-center">
 
 
 
@@ -26,18 +26,23 @@ export default function Home() {
 
         <Blur />
 
-        <motion.div className="flex" initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{duration:1, ease:"easeOut", delay:0.2}}>
+        <motion.div className="flex flex-col" initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{duration:1, ease:"easeOut", delay:0.2}}>
           <div className="flex-grow flex items-center">
-            <div>
-              <Icons />
+            <div className="mb-20">
               
-              <p className="title">Hi, I'm Radim</p>
-              <p className="bio">A 17 years-old student from Czech Republic,<br /> currently living in Kroměříž. I'm a high <br /> school student learning IT.</p>
+              <p className="title">Radim Zavadil</p>
+              <p className="bio">A 17 years-old student from Czech Republic,<br /> currently living in Kroměříž. I'm a high school student learning IT.</p>
             </div>
             
           </div>
 
-          <Cards />
+          <div className="mb-20">
+            <p className="title">Connect</p>
+            <p className="bio">Reach me at radimzavadil@gmail.com. Connect with me on the platforms below.</p>
+            <Icons/>
+          </div>
+
+          
         </motion.div>
 
       
