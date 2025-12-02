@@ -8,11 +8,15 @@ body {
 }
 
 h1 {
-  @apply text-4xl font-semibold my-1;
+  @apply text-lg font-medium text-gray-900 mb-4 tracking-tight;
+}
+
+h2 {
+  @apply text-lg font-medium text-gray-900 mb-6 tracking-tight;
 }
 
 p{
-  @apply text-[#57534E] dark:text-[#CBC8CD];
+  @apply text-[#57534E] dark:text-[#CBC8CD] tracking-tight;
 }
 
 footer {
@@ -29,6 +33,10 @@ ul {
 
 li {
   @apply p-3 hover:text-gray-300 dark:hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out cursor-pointer;
+}
+
+a {
+  @apply text-gray-900 hover:underline  font-medium;
 }
 
 .group {
