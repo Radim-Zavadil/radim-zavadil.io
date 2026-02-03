@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         <h1>Gavin Nelson</h1>
-        <p className="text-muted">Designer at OpenAI</p>
+        <p className="text-muted">Software Engineer</p>
       </motion.div>
 
       {/* Navigation */}
@@ -48,7 +48,7 @@ export default function Home() {
       >
         <Link href="/about" className="nav-link">About</Link>
         <Link href="/connect" className="nav-link">Connect</Link>
-        <Link href="#" className="nav-link">Features</Link>
+        <Link href="/features" className="nav-link">Features</Link>
       </motion.nav>
 
       {/* Main Content List - Continuous, no headers */}

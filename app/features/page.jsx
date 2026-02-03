@@ -9,13 +9,14 @@ const blurAnimation = {
     transition: { duration: 1.2, ease: "easeOut" }
 };
 
-const SocialLink = ({ title, href }) => (
-    <Link href={href} className="link-item-small group" target={href.startsWith('mailto') ? undefined : "_blank"} rel="noopener noreferrer">
+const FeatureItem = ({ title, metadata, href = "#" }) => (
+    <Link href={href} className="link-item-small group">
         <span className="link-title">{title}</span>
+        <span className="link-metadata">{metadata}</span>
     </Link>
 );
 
-export default function ConnectPage() {
+export default function FeaturesPage() {
     return (
         <main className="max-w-[650px] mx-auto px-6 py-20 pb-32">
             {/* Profile Section */}
@@ -35,31 +36,43 @@ export default function ConnectPage() {
                     </Link>
                 </div>
 
-                <h1>Connect</h1>
+                <h1>Features</h1>
             </motion.div>
 
-            {/* Social Links List */}
+            {/* Features List */}
             <motion.div
                 className="space-y-1"
                 initial={{ filter: "blur(12px)", opacity: 0 }}
                 animate={{ filter: "blur(0px)", opacity: 1 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
             >
-                <SocialLink
-                    title="Email"
-                    href="mailto:radimzavadil15@gmail.com"
+                <FeatureItem
+                    title="Interview with Gavin Nelson, Lovers Magazine by Spaces"
+                    metadata="2025"
                 />
-                <SocialLink
-                    title="Twitter"
-                    href="https://x.com/radimzavadil"
+                <FeatureItem
+                    title="Dive Club podcast: Prototyping, interaction design, and SwiftUI"
+                    metadata="2024"
                 />
-                <SocialLink
-                    title="GitHub"
-                    href="https://github.com/radimzavadil"
+                <FeatureItem
+                    title="iOS & macOS App Icon Book"
+                    metadata="2024"
                 />
-                <SocialLink
-                    title="LinkedIn"
-                    href="https://linkedin.com/in/radimzavadil"
+                <FeatureItem
+                    title="Workspaces #341"
+                    metadata="2023"
+                />
+                <FeatureItem
+                    title="Interview with Gavin Nelson, Product and Icon Designer"
+                    metadata="2023"
+                />
+                <FeatureItem
+                    title="Made with Sketch: How Gavin Nelson Puts the Icon in Iconic"
+                    metadata="2022"
+                />
+                <FeatureItem
+                    title="Workspaces #136"
+                    metadata="2022"
                 />
             </motion.div>
         </main>

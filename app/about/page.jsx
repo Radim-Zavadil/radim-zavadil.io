@@ -14,7 +14,7 @@ export default function AboutPage() {
         <main className="max-w-[650px] mx-auto px-6 py-20 pb-32">
             {/* Profile Section */}
             <motion.div
-                className="flex flex-col items-start"
+                className="flex flex-col items-start mb-8"
                 {...blurAnimation}
             >
                 <div className="mb-6">
@@ -29,7 +29,7 @@ export default function AboutPage() {
                     </Link>
                 </div>
 
-                <h1 className="mb-16">About</h1>
+                <h1>About</h1>
             </motion.div>
 
             {/* Content Section */}
