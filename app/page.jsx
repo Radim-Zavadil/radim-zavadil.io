@@ -46,8 +46,8 @@ export default function Home() {
         animate={{ filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
       >
-        <Link href="#" className="nav-link">About</Link>
-        <Link href="#" className="nav-link">Connect</Link>
+        <Link href="/about" className="nav-link">About</Link>
+        <Link href="/connect" className="nav-link">Connect</Link>
         <Link href="#" className="nav-link">Features</Link>
       </motion.nav>
 

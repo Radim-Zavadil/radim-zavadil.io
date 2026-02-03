@@ -76,6 +76,23 @@ span {
   color: var(--muted);
 }
 
+/* Smaller link items for Connect page */
+.link-item-small {
+  @apply flex flex-col py-1.5 px-6 -mx-6 transition-all duration-300 w-fit;
+  position: relative;
+}
+
+.link-item-small .link-title {
+  @apply block text-[0.9rem] font-medium transition-colors duration-200 w-fit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #eeeeee;
+}
+
+.link-item-small:hover .link-title {
+  text-decoration-color: #111111;
+}
+
 /* Animation helpers */
 .blur-in {
   filter: blur(8px);
