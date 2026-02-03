@@ -1,227 +1,89 @@
 @import "tailwindcss";
 
-/*body*/
-
-body {
-  background-color: #FFFFFF;
-  @apply text-black dark:text-white dark:bg-black font-[Inter] h-screen flex flex-col;
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --muted: #666666;
+  --border: #eeeeee;
 }
 
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Typography */
 h1 {
-  @apply text-lg font-medium text-gray-900 mb-4 tracking-tight;
+  @apply text-[1.1rem] font-medium tracking-tight mb-1;
 }
 
 h2 {
-  @apply text-lg font-medium text-gray-900 mb-6 tracking-tight;
+  @apply text-[1.1rem] font-medium tracking-tight mt-12 mb-4;
 }
 
-p{
-  @apply text-[#57534E] dark:text-[#CBC8CD] tracking-tight;
+p,
+span {
+  @apply text-[0.95rem] tracking-tight;
 }
 
-footer {
-  @apply text-[#171717] dark:text-[rgba(230,230,230,0.5)] text-[12px] font-extralight tracking-widest mx-12 ;
+.text-muted {
+  color: var(--muted);
 }
 
-footer ul a {
-  @apply p-3 hover:text-gray-300 dark:hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out;
+/* Navigation links */
+.nav-link {
+  @apply text-[0.9rem] transition-all duration-200;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: #eeeeee;
+  text-underline-offset: 4px;
 }
 
-ul {
-  @apply flex;
+.nav-link:hover {
+  color: var(--foreground);
+  text-decoration-color: var(--foreground);
 }
 
-li {
-  @apply p-3 hover:text-gray-300 dark:hover:text-[rgb(230,230,230)] hover:duration-700 hover:ease-out cursor-pointer;
-}
-
-a {
-  @apply text-gray-900 hover:underline  font-medium;
-}
-
-.group {
-  @apply flex justify-start items-center w-[493px] h-[103px] bg-[#F5F5F4] p-5 dark:bg-transparent rounded-xl border-[1px] border-[rgb(209,213,219)] hover:border-r-[2px] hover:border-r-[rgba(255,255,255,0.3)] dark:border-[rgba(223,223,223,0.1)] dark:shadow-[inset_0px_-69px_100px_-102px_rgba(255,255,255,0.2)] relative;
-}
-
-.group::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 0.75rem;
-  background: linear-gradient(to right,
-    rgba(0,0,0,0) 0%,
-    rgba(19,33,47,0.5) 82%,
-    rgba(29,52,71,0.75) 100%
-  );
-  opacity: 0;
-  transition: opacity 300ms ease-out;
-  pointer-events: none;
-}
-
-.group::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 0.75rem;
-  box-shadow: inset 0 0 100px rgba(255,255,255,0.1);
-  mask: linear-gradient(to left, white 0%, white 5px, transparent 15px);
-  opacity: 0;
-  transition: opacity 300ms ease-out;
-  pointer-events: none;
-}
-
-.group:hover::before,
-.group:hover::after {
-  opacity: 1;
-}
-
-.cardTitle {
-  @apply text-[#171717] dark:text-white font-light text-[16px] mb-3 group-hover:bg-[linear-gradient(to_right,rgba(255,255,255,1)_47%,rgba(38,64,94,1)_100%)] group-hover:bg-clip-text group-hover:text-transparent transition-all hover:duration-300 hover:ease-in;
-}
-
-.cardText {
-  @apply text-[#6B7280] dark:text-[rgba(255,255,255,0.8)] font-extralight text-[13px] group-hover:bg-[linear-gradient(to_right,rgba(255,255,255,0.8)_50%,rgba(125,169,219,1)_100%)] group-hover:bg-clip-text group-hover:text-transparent transition-all hover:duration-300 hover:ease-in;
-}
-
-.cardIcon {
-  @apply h-[60px] mr-5;
-}
-
-.title {
-  @apply text-lg font-medium text-black;
-}
-
-.bio {
-  @apply mt-2 text-lg text-[#57534E] dark:bg-gradient-to-r from-[#FFFFFF] inline-block dark:text-transparent dark:bg-clip-text;
-}
-
-.blur {
-  @apply z-10 w-32 h-96 absolute ml-[1760px] rounded-full bg-[rgba(28,145,255,0.1)] blur-3xl lg:opacity-100;
-}
-
-.btn {
-  @apply w-[120px] h-[30px] border-2 border-[rgba(223,223,223,0.1)] rounded-[5px] text-center mt-3 hover:opacity-60 hover:duration-150 hover:ease-out;
-}
-
-.linkText {
-  @apply text-black font-medium border-b-2 border-gray-200 hover:border-gray-500 ;
-}
-
-.link {
-  @apply px-4 py-2 rounded-md hover:bg-gray-100 mt-5;
-}
-
-/*Switch*/
-/* From Uiverse.io by vinodjangid07 */ 
-.button {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  /*background-color: rgb(0, 0, 0);*/
-  border: 1px solid rgba(124, 124, 124, 0.7);
-  border-radius: 30px;
-  /*color: rgb(255, 255, 255);*/
-  font-weight: 600;
+/* Link Items */
+.link-item {
+  @apply flex flex-col py-3 px-6 -mx-6 transition-all duration-300 w-fit;
   position: relative;
-  cursor: pointer;
-  transition-duration: .2s;
-  padding-left: 8px;
-  transition-duration: .5s;
-  @apply text-black dark:text-white bg-transparent;
 }
 
-.svgIcon {
-  height: 25px;
-  transition-duration: 1.5s;
+.link-item:hover {
+  /* Subtle black shadow around the link text area */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
 }
 
-.bell path {
-  fill: rgb(19, 19, 19);
+.link-title {
+  @apply block text-[1rem] font-medium transition-colors duration-200 w-fit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #eeeeee;
 }
 
-.button:hover {
-  transition-duration: .5s;
-  @apply bg-gray-200 dark:bg-[rgba(44,44,43)]
+.link-item:hover .link-title {
+  text-decoration-color: #111111;
 }
 
-.button:active {
-  transform: scale(0.97);
-  transition-duration: .2s;
+.link-metadata {
+  @apply block text-[0.85rem] mt-1;
+  color: var(--muted);
 }
 
-.button:hover .svgIcon {
-  transform: rotate(250deg);
-  transition-duration: 1.5s;
+/* Animation helpers */
+.blur-in {
+  filter: blur(8px);
+  opacity: 0;
 }
 
-
-
-
-/*light rays
-@keyframes jumbo {
-  from {
-      background-position: 50% 50%, 50% 50%;
-  }
-  to {
-      background-position: 350% 50%, 350% 50%;
-  }
+.sharpen {
+  filter: blur(0);
+  opacity: 1;
+  transition: filter 0.8s ease-out, opacity 0.8s ease-out;
 }
-
-.jumbo {
-  --stripes: repeating-linear-gradient(
-      100deg,
-      #fff 0%,
-      #fff 7%,
-      transparent 10%,
-      transparent 12%,
-      #fff 16%
-  );
-  --stripesDark: repeating-linear-gradient(
-      100deg,
-      #000 0%,
-      #000 7%,
-      transparent 10%,
-      transparent 12%,
-      #000 16%
-  );
-  --rainbow: repeating-linear-gradient(
-      100deg,
-      #60a5fa 10%,
-      #e879f9 15%,
-      #60a5fa 20%,
-      #5eead4 25%,
-      #60a5fa 30%
-  );
-  background-image: var(--stripes), var(--rainbow);
-  background-size: 300%, 200%;
-  background-position: 50% 50%, 50% 50%;
-
-  filter: invert(100%);
-
-  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
-
-  pointer-events: none;
-}
-
-.jumbo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--stripes), var(--rainbow);
-  background-size: 200%, 100%;
-  animation: jumbo 60s linear infinite;
-  background-attachment: fixed;
-  mix-blend-mode: difference;
-}
-
-.dark .jumbo {
-  background-image: var(--stripesDark), var(--rainbow);
-  filter: blur(10px) opacity(50%) saturate(200%);
-}
-.dark .jumbo::after {
-  background-image: var(--stripesDark), var(--rainbow);
-}
-*/

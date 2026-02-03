@@ -1,28 +1,20 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
-import twitterIcon from './x-icon.png';
-import instagramIcon from './instagram-icon.png';
-import githubIcon from './github-icon.png';
-import linkedlnIcon from './linkedln-icon.png';
+const SocialLink = ({ name, description, href = "#" }) => (
+  <Link href={href} className="link-item group">
+    <span className="link-title">{name}</span>
+    <span className="link-metadata">{description}</span>
+  </Link>
+);
 
 export default function Links() {
   return (
-    <main className='flex flex-col gap-7 text-gray-400'>
-
-      <Link href="#">
-        Instagram
-      </Link>
-      <Link href="#">
-        LinkedIn
-      </Link>
-      <Link href="#">
-        GitHub
-      </Link>
-      <Link href="#">
-        X
-      </Link>
-    </main>
-  )
+    <div className="flex flex-col gap-1">
+      <SocialLink name="Instagram" description="@radimzavadil" />
+      <SocialLink name="LinkedIn" description="Radim Zavadil" />
+      <SocialLink name="GitHub" description="radimzavadil" />
+      <SocialLink name="X" description="@radimzavadil" />
+    </div>
+  );
 }

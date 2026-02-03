@@ -1,89 +1,109 @@
 "use client";
 import { motion } from "framer-motion";
-import Links from "./components/LinksComponent";
+import Image from "next/image";
 import Link from "next/link";
+import Links from "./components/LinksComponent";
+
+const blurAnimation = {
+  initial: { filter: "blur(12px)", opacity: 0, y: 10 },
+  animate: { filter: "blur(0px)", opacity: 1, y: 0 },
+  transition: { duration: 1.2, ease: "easeOut" }
+};
+
+const ProjectLink = ({ title, date, description, href = "#" }) => (
+  <Link href={href} className="link-item group">
+    <span className="link-title">{title}</span>
+    <span className="link-metadata">{date} {description}</span>
+  </Link>
+);
 
 export default function Home() {
-
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Header */}
-      <header className="w-full py-6 px-8">
-        <nav className="max-w-4xl mx-auto flex justify-end gap-8">
-          <Link href="#" className="text-gray-900 hover:text-gray-600 transition-colors font-medium border-b-2 border-gray-900 pb-1">
-            Index
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-            About
-          </Link>
-        </nav>
-      </header>
+    <main className="max-w-[650px] mx-auto px-6 py-20 pb-32">
+      {/* Profile Section */}
+      <motion.div
+        className="flex flex-col items-start"
+        {...blurAnimation}
+      >
+        <div className="mb-6">
+          <Image
+            src="/img/profile-picture.png"
+            alt="Profile"
+            width={48}
+            height={48}
+            className="rounded-full grayscale"
+          />
+        </div>
 
-      {/* Decorative blur elements */}
-      <div>
-        <div className="z-0 w-10 h-52 absolute top-0 right-32 -rotate-45 rounded-full bg-gray-200 blur-3xl"></div>
-        <div className="z-0 w-10 h-40 absolute top-0 right-80 -rotate-12 rounded-full bg-gray-300 blur-3xl"></div>
-        <div className="z-0 w-10 h-48 absolute top-0 right-[500px] rounded-full bg-gray-200 blur-3xl"></div>
-        <div className="z-0 w-10 h-60 absolute top-0 right-[670px] rotate-12 rounded-full bg-gray-100 blur-3xl"></div>
-        <div className="z-0 w-10 h-48 absolute top-0 right-[850px] rotate-45 rounded-full bg-gray-200 blur-3xl"></div>
-        <div className="z-0 w-10 h-36 absolute top-0 right-[1100px] rotate-45 rounded-full bg-gray-300 blur-3xl"></div>
-      </div>
+        <h1>Gavin Nelson</h1>
+        <p className="text-muted">Designer at OpenAI</p>
+      </motion.div>
 
+      {/* Navigation */}
+      <motion.nav
+        className="flex gap-4 mt-8 mb-12"
+        initial={{ filter: "blur(12px)", opacity: 0 }}
+        animate={{ filter: "blur(0px)", opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+      >
+        <Link href="#" className="nav-link">About</Link>
+        <Link href="#" className="nav-link">Connect</Link>
+        <Link href="#" className="nav-link">Features</Link>
+      </motion.nav>
 
-      <div className="flex-grow flex items-center justify-center px-10">
-        <motion.div 
-          className="max-w-2xl w-full"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-        >
-
-          <div className="mb-16">
-            <h1>Radim Zavadil</h1>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Software engineer
-            </p>
-          </div>
-
-          {/* Latest Posts Section */}
-          <div className="mb-16">
-            <h2>Latest Posts</h2>
-            
-            <div className="space-y-6">
-              <div>
-                <a href="#" className="text-gray-900 font-medium hover:underline text-lg">
-                  My Website Refresh
-                </a>
-                <p className="text-gray-600 mt-1">New perspective on personal websites.</p>
-              </div>
-
-              <div>
-                <a href="#" className="text-gray-900 font-medium hover:underline text-lg">
-                  Things I Use Daily: Tech Gear
-                </a>
-                <p className="text-gray-600 mt-1">Some of my favorite tools and gear</p>
-              </div>
-
-              <div>
-                <a href="#" className="text-gray-900 font-medium hover:underline text-lg">
-                  My Notion Productivity Setup
-                </a>
-                <p className="text-gray-600 mt-1">Workflow as a developer and creator (templates)</p>
-              </div>
-            </div>
-          </div>
-
-          
-          <div>
-            <h2>Connect</h2>
-            <p className="text-gray-600 mb-10 leading-relaxed">
-              Reach me at radimzavadil16@gmail.com. Connect with me on the platforms below.
-            </p>
-            
-            <Links/>
-          </div>
-        </motion.div>
-      </div>
+      {/* Main Content List - Continuous, no headers */}
+      <motion.div
+        className="space-y-1"
+        initial={{ filter: "blur(12px)", opacity: 0 }}
+        animate={{ filter: "blur(0px)", opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+      >
+        <ProjectLink
+          title="Interaction prototypes"
+          date="2024–present"
+          description="Interaction design"
+        />
+        <ProjectLink
+          title="App icon design"
+          date="2020–present"
+          description="iOS and macOS app icons"
+        />
+        <ProjectLink
+          title="Explorations"
+          date="2020–present"
+          description="Misc. creative exercises"
+        />
+        <ProjectLink
+          title="Linear Navigation"
+          date="2025"
+          description="Product and interaction design"
+        />
+        <ProjectLink
+          title="Linear Search"
+          date="2025"
+          description="Product and interaction design"
+        />
+        <ProjectLink
+          title="Linear Documents"
+          date="2024"
+          description="Product and interaction design"
+        />
+        <ProjectLink
+          title="Linear Mobile v1.0"
+          date="2024"
+          description="Product design"
+        />
+        <ProjectLink
+          title="Linear homepage renders"
+          date="2024"
+          description="3D rendering"
+        />
+        <ProjectLink
+          title="Crafting for iOS"
+          date="2023"
+          description="Interface and system design"
+        />
+      </motion.div>
     </main>
   );
 }
